@@ -1,10 +1,13 @@
 
 # Question Generator
 
-Deployed on [Streamlit]([https://katherineoelsner.com/](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/))
+Deployed on [Streamlit](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/)
+
+[https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/)
 
 Warning donot run both the chat and question Generator Together
 
+![image](https://github.com/Suyash018/Question_Generator/assets/73903830/1dd33b13-a04c-4af9-8e10-b811fe7f81ba)
 
 
 ## Environment Variables
@@ -34,10 +37,28 @@ It generates the question in TXT format it is questions.txt
 
 Streamlit Demo
 
+![image](https://github.com/Suyash018/Question_Generator/assets/73903830/3c0f9464-547a-436c-8465-fdba32fdbf94)
+
+
+Multiple Questions Can be Generated of Different Types
+
+You can download the TXT file with the button or read the generation
+
+![image](https://github.com/Suyash018/Question_Generator/assets/73903830/cc962996-ba50-45d5-9c7c-470f71326679)
+
+TXT file
+
+Download the TXT file with the button
+
+![image](https://github.com/Suyash018/Question_Generator/assets/73903830/7a38d6a9-7fb0-47a3-b644-a2135fb13f5e)
+
 
 # Memory Rag
 
 The ipynb File is rag.ipynb
+
+![image](https://github.com/Suyash018/Question_Generator/assets/73903830/6c15db62-90c1-4ac0-8751-882f094d432c)
+
 
 Streamlit Demo
 
