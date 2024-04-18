@@ -21,7 +21,7 @@ def txtfile(z):
 
 st.title("Generates Question")
 
-st.header("Please donot run the chat and generator together as it resets one")
+st.header("Please donot run the chat and generator together as it resets")
 one_word = st.number_input('Total One word Questions',value=0,max_value =3,min_value=0,key="one_word")
 mcq = st.number_input('Total mcq Questions',value=0,max_value =3,min_value=0,key="mcq")
 True_false = st.number_input('Total True/False Questions',value=0,max_value =3,min_value=0,key="True_false")
