@@ -1,0 +1,38 @@
+Question: True or False: The Big Mac Index is limited by geographical coverage due to the presence of the McDonald's franchise.
+
+Answer: True
+
+Question: True or False: The price of a Big Mac in a country is solely determined by relative currency values.
+
+Answer: False
+
+Question: Which country had the most expensive Big Mac in July 2023?
+Options:
+- Switzerland
+- Norway
+- Uruguay
+- Argentina
+- EU
+- Sweden
+
+Answer: Switzerland
+
+Question: In which city did an average local worker have to work the longest to earn enough to buy a Big Mac in 2015?
+Options:
+- Nairobi
+- Manila
+- Mexico City
+- Jakarta
+- Cairo
+- Kyiv
+
+Answer: Nairobi
+
+Question: What is the implied exchange rate according to the Big Mac index for July 2023?
+
+Answer: 1.20 SFr/USD
+
+Question: What is the name of the index created solely for Africa that uses KFC's Original 15 pc. bucket instead of a Big Mac?
+
+Answer: KFC Index
+
