@@ -3,6 +3,10 @@ import json
 
 from gpt import getanswer
 from chat_rag import quest
+from embeddings import pine_gen_embedding
+
+
+st.title("Chat with file and generate question/Answer")
 
 def txtfile(z):
     questions_content = ""
@@ -18,27 +22,50 @@ def txtfile(z):
     return questions_content
 
     
-
-st.title("Generates Question")
-
-st.header("Please donot run the chat and generator together as it resets")
-one_word = st.number_input('Total One word Questions',value=0,max_value =3,min_value=0,key="one_word")
-mcq = st.number_input('Total mcq Questions',value=0,max_value =3,min_value=0,key="mcq")
-True_false = st.number_input('Total True/False Questions',value=0,max_value =3,min_value=0,key="True_false")
-
-st.write('Total number of questions are ', one_word+True_false+mcq)
+uploaded_files = st.file_uploader(
+    label="Upload PDF files", type=["pdf"], accept_multiple_files=True
+)
+# if not uploaded_files:
+#     st.info("Please upload PDF documents to continue.")
+#     st.stop()
 
 
-if st.button('Start'):
-    st.write("Loading")
-    data = json.loads(getanswer(one_word,mcq,True_false))
-    answer= txtfile(data)
-    st.download_button('Download the text file and the questions', answer)
-    st.write(answer)
+if 'embeddings_created' not in st.session_state:
+    st.session_state.embeddings_created = False
 
-with st.sidebar:
-    messages = st.container(height=400)
-    messages.chat_message("assistant").write("Hello! How can I assist you today?")
-    if prompt := st.chat_input("Ask About the document"):
-        messages.chat_message("user").write(prompt)
-        messages.chat_message("assistant").write(quest(prompt))
+if 'chat_start' not in st.session_state:
+    st.session_state.chat_start = False
+
+if st.button('Generate'):
+    pine_gen_embedding(uploaded_files)
+
+    st.session_state.embeddings_created = True
+    st.session_state.chat_start = True
+
+
+
+if st.session_state.embeddings_created == True:
+
+    one_word = st.number_input('Total One word Questions',value=0,max_value =3,min_value=0,key="one_word")
+    mcq = st.number_input('Total mcq Questions',value=0,max_value =3,min_value=0,key="mcq")
+    True_false = st.number_input('Total True/False Questions',value=0,max_value =3,min_value=0,key="True_false")
+
+    st.write('Total number of questions are ', one_word+True_false+mcq)
+
+    if st.button('Start'):
+        st.write("Loading")
+        data = json.loads(getanswer(one_word,mcq,True_false))
+        answer= txtfile(data)
+        st.download_button('Download the text file and the questions', answer)
+        st.write(answer)
+
+
+if st.session_state.chat_start == True:
+
+
+    with st.sidebar:
+        messages = st.container(height=400)
+        messages.chat_message("assistant").write("Hello! How can I assist you today?")
+        if prompt := st.chat_input("Ask About the document"):
+            messages.chat_message("user").write(prompt)
+            messages.chat_message("assistant").write(quest(prompt))

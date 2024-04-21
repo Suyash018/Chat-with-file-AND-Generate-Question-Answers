@@ -1,5 +1,5 @@
 
-# Question Generator
+# Chat with file and generate question/Answer
 
 Deployed on [Streamlit](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/)
 
@@ -8,6 +8,13 @@ Deployed on [Streamlit](https://questiongenerator-cagyflei86fyppgorbqk8p.streaml
 Warning donot run both the chat and question Generator Together
 
 ![image](https://github.com/Suyash018/Question_Generator/assets/73903830/1dd33b13-a04c-4af9-8e10-b811fe7f81ba)
+
+# Concepts used
+ - Pinecone - For vector store
+ - Langchain - For Rag with GPT
+ - StreamLit - For deployment
+ - ChatGpt with RAG
+ - Langchain chain- QAGenerationChain (Looked into the code Basically it is RAG model which makes question by splitiing Docs and making Questions for each split)
 
 # Index
 

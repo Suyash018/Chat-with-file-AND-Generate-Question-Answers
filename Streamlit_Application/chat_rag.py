@@ -3,10 +3,13 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_pinecone import PineconeVectorStore
+
 
 # Load data
 embeddings=OpenAIEmbeddings() # open ai emebeddings
-db = FAISS.load_local("faiss_index", embeddings,allow_dangerous_deserialization=True)# loading saved Faiss index in local
+index_name = "question-maker-rag"
+db = PineconeVectorStore(index_name=index_name, embedding=embeddings)# loading saved in pinecone
 
 
 from langchain_openai import ChatOpenAI
