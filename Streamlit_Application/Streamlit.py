@@ -5,10 +5,6 @@ from gpt import getanswer
 from chat_rag import quest
 from embeddings import pine_gen_embedding
 
-
-
-
-
 st.title("Chat with file and generate question/Answer")
 
 def txtfile(z):
@@ -28,9 +24,9 @@ def txtfile(z):
 uploaded_files = st.file_uploader(
     label="Upload PDF files", type=["pdf"], accept_multiple_files=True
 )
-# if not uploaded_files:
-#     st.info("Please upload PDF documents to continue.")
-#     st.stop()
+if not uploaded_files:
+    st.info("Please upload PDF documents to continue.")
+    st.stop()
 
 
 if 'embeddings_created' not in st.session_state:

@@ -6,11 +6,11 @@ from langchain_pinecone import PineconeVectorStore
 import tempfile
 import os
 from pinecone import Pinecone
-pinecone_api_key = os.environ.get('PINECONE_API_KEY')
-index_name = "question-maker-rag"
+# pinecone_api_key = os.environ.get('PINECONE_API_KEY')
+# index_name = "question-maker-rag"
 
-index= Pinecone(api_key=pinecone_api_key).Index(index_name)
-index.delete(delete_all=True)
+# index= Pinecone(api_key=pinecone_api_key).Index(index_name)
+# index.delete(delete_all=True)
 
 
 
