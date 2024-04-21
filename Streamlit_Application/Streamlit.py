@@ -4,7 +4,15 @@ import json
 from gpt import getanswer
 from chat_rag import quest
 from embeddings import pine_gen_embedding
+from pinecone import Pinecone
 
+
+import os
+pinecone_api_key = os.environ.get('PINECONE_API_KEY')
+index_name = "question-maker-rag"
+
+index= Pinecone(api_key=pinecone_api_key).Index(index_name)
+index.delete(delete_all=True)
 
 st.title("Chat with file and generate question/Answer")
 
