@@ -1,9 +1,6 @@
 
 # Chat with file and generate question/Answer
-
-Deployed on [Streamlit](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/)
-
-[https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/](https://questiongenerator-cagyflei86fyppgorbqk8p.streamlit.app/)
+Removed from Streamlit as I had another project to deploy
 
 Warning donot run both the chat and question Generator Together
 
